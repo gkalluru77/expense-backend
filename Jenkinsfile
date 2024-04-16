@@ -1,31 +1,3 @@
- pipeline {
-     agent {
-          node { label 'workstation'}
-        }
+ @Library('gdevops-library')
 
-            stages {
-              stage('Compile') {
-              steps {
-                  echo 'Compile'
-                }
-              }
-              stage('Test Cases') {
-                steps {
-                  echo 'Test Cases'
-                }
-              }
-
-            stage('Build') {
-               steps {
-                  echo 'Build'
-                }
-              }
-
-              stage('Release App') {
-                steps {
-                  echo 'Release'
-             }
-        }
-
-     }
- }
+ci()
